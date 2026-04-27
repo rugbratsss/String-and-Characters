@@ -1,4 +1,15 @@
-    public static void sortServiceProvider(String[] serviceProviders, String[] originCountry, int[] subscribers, int[] userRatings)
+  public static int searchP(String[] serviceProviders, String searchProvider)
+    {
+        for(int i = 0; i < serviceProviders.length; i++)
+        {
+            if(serviceProviders[i].equalsIgnoreCase(searchProvider))
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
+public static void sortServiceProvider(String[] serviceProviders, String[] originCountry, int[] subscribers, int[] userRatings)
     {
         for(int i = 0; i < serviceProviders.length - 1; i++)
         {
